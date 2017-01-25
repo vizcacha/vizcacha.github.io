@@ -2,8 +2,24 @@
 title: Reading
 ---
 
+## 2017
+
+* *The Case Against Sugar* by Gary Taubes (January 2017)
+* *The Crusades: A Very Short Introduction* by Christopher Tyerman (January 2017)
+
 ## 2016
 
+* *The Big Picture* by Sean Carroll (December 2016)
+* *Ratfucked* by David Daley (November 2016)
+* *Siddhartha* by Hermann Hesse (August 2016)
+* *The Interpreter of Maladies* by Jhumpa Lahiri (August 2016)
+* *Invisible Cities* by Italo Calvino (July 2016)
+* *Zero K* by Don Delillo (July 2016)
+* *The 5 Choices* by Kogon, Merrill, & Rinne (July 2016)
+* *Pandolfini's Ultimate Guide to Chess* by Bruce Pandolfini (June 2016)
+* *The Signal and the Noise* by Nate Silver (June 2016)
+* *Concrete Economics* by Stephen Cohen and J Bradford Delong (May 2016)
+* *Redeployment* by Phil Klay (March 2016)
 * *The Problems of Philosophy* by Bertrand Russell (March 2016)
 * *The Sailor Who Fell from Grace with the Sea* by Yukio Mishima (March 2016)
 * *Fine, Fine, Fine, Fine, Fine* by Diane Williams (March 2016)
