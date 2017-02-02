@@ -56,16 +56,32 @@ df[<span class="st">'E,TeV'</span>].plot(kind<span class="op">=</span><span clas
 plt.xlabel(<span class="st">'Energy (TeV)'</span>)</code></pre></div>
 <p>which yields</p>
 <div class="figure">
-<img src="../images/cosmichist1.png" alt="histogram of Energies" />
-<p class="caption">histogram of Energies</p>
+<img src="../images/cosmichist1.png" alt />
+
 </div>
+<p>Most cosmic ray spectra plot flux on the y-axis. We can get this from our data, by binning the energies. Our flux proxy is then given by dividing the count of detections within the energy bin by the size of the energy bin. The plot of flux versus particle energey is shown below.</p>
+<div class="figure">
+<img src="../images/flux.png" alt />
+
+</div>
+<p>That plot was generated with</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">hist, bins <span class="op">=</span> np.histogram(df[<span class="st">'E,TeV'</span>], bins<span class="op">=</span><span class="dv">20</span>)
+deltaE <span class="op">=</span> np.diff(bins)
+flux <span class="op">=</span> hist <span class="op">/</span> deltaE
+flux[flux <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> np.nan
+fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> plt.gca()
+ax.plot(bins[:<span class="op">-</span><span class="dv">1</span>], flux, <span class="st">'o'</span>)
+ax.set_xscale(<span class="st">'log'</span>)
+plt.xlabel(<span class="st">'Energy (TeV)'</span>)
+plt.ylabel(<span class="st">'Flux (count/$\Delta E$) (TeV$^{-1}$)'</span>)</code></pre></div>
 <h2 id="fitting-the-data">Fitting the Data</h2>
 <h2 id="concluding-remarks">Concluding Remarks</h2>
 <p>There is speculation about a `knee’ in the energy spectrum at around 10^15 eV. This data set does not contain enough detections at high energies to make a conclusion.</p>
 <h2 id="bibliography">Bibliography</h2>
-<p>Carroll, Bradley W. and Ostlie, Dale A., An Introduction to Modern Astrophysics, 2nd Ed., Pearson Education, Inc. , 2007.</p>
+<p>Carroll, Bradley W. and Ostlie, Dale A., An Introduction to Modern Astrophysics, 2nd Ed., Pearson Education, Inc. (2007)</p>
 <p>C. Patrignani et al. (Particle Data Group), Chin. Phys. C, 40, 100001 (2016)</p>
-<p>Wolchover, Natalie, The Particle That Broke a Cosmic Speed Limit, https://www.quantamagazine.org/20150514-the-particle-that-broke-a-cosmic-speed-limit/</p>
+<p>Wolchover, Natalie, The Particle That Broke a Cosmic Speed Limit, <a href="https://www.quantamagazine.org/20150514-the-particle-that-broke-a-cosmic-speed-limit/">Article Link</a> (2015)</p>
 
         </div>
         <div id="footer">
