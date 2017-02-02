@@ -54,7 +54,29 @@ plt.xlabel('Energy (TeV)')
 
 which yields
 
-![histogram of Energies](/images/cosmichist1.png)
+![](/images/cosmichist1.png)
+
+Most cosmic ray spectra plot flux on the y-axis.
+We can get this from our data, by binning the energies.
+Our flux proxy is then given by dividing the count of detections within the energy bin by the size of the energy bin.
+The plot of flux versus particle energey is shown below.
+
+![](/images/flux.png)
+
+That plot was generated with
+
+```python
+hist, bins = np.histogram(df['E,TeV'], bins=20)
+deltaE = np.diff(bins)
+flux = hist / deltaE
+flux[flux == 0] = np.nan
+fig = plt.figure()
+ax = plt.gca()
+ax.plot(bins[:-1], flux, 'o')
+ax.set_xscale('log')
+plt.xlabel('Energy (TeV)')
+plt.ylabel('Flux (count/$\Delta E$) (TeV$^{-1}$)')
+```
 
 ## Fitting the Data
 
@@ -65,8 +87,8 @@ This data set does not contain enough detections at high energies to make a conc
 
 ## Bibliography
 
-Carroll, Bradley W. and Ostlie, Dale A., An Introduction to Modern Astrophysics, 2nd Ed., Pearson Education, Inc. , 2007.
+Carroll, Bradley W. and Ostlie, Dale A., An Introduction to Modern Astrophysics, 2nd Ed., Pearson Education, Inc. (2007)
 
 C. Patrignani et al. (Particle Data Group), Chin. Phys. C, 40, 100001 (2016)
 
-Wolchover, Natalie, The Particle That Broke a Cosmic Speed Limit, https://www.quantamagazine.org/20150514-the-particle-that-broke-a-cosmic-speed-limit/
+Wolchover, Natalie, The Particle That Broke a Cosmic Speed Limit, [Article Link](https://www.quantamagazine.org/20150514-the-particle-that-broke-a-cosmic-speed-limit/) (2015)
