@@ -30,7 +30,20 @@
     
 </div>
 
-<p>While reading Landau and Lifschitz’s Mechanics book I came across a theorem that I had not encountered before. Euler’s Homogeneous Function Theorem states</p>
+<p>While reading Landau and Lifschitz’s Mechanics book I came across a theorem that I had not encountered before. First, let us define a homogeneous function.</p>
+<div class="definition">
+<p>A function <span class="math inline"><em>f</em></span> is <em>homogeneous</em> of order <span class="math inline"><em>k</em></span> if <span class="math inline"><em>f</em>(<em>t</em><em>x</em><sub>1</sub>, …, <em>t</em><em>x</em><sub><em>n</em></sub>) = <em>t</em><sup><em>k</em></sup><em>f</em>(<em>x</em><sub>1</sub>, …, <em>x</em><sub><em>n</em></sub>)</span>.</p>
+</div>
+Euler’s Homogeneous Function Theorem then states
+<div class="theorem">
+<p>Let <span class="math inline"><em>f</em>(<em>x</em><sub>1</sub>, …, <em>x</em><sub><em>n</em></sub>)</span> be a homogeneous function of order <span class="math inline"><em>k</em></span>. Then <br /><span class="math display">$$ k f(x_1, \dots, x_n) = \sum_{i=1}^n x_i \frac{\partial f}{\partial x_i}$$</span><br /></p>
+</div>
+<div class="proof">
+<p>Since <span class="math inline"><em>f</em></span> is homogeneous of order <span class="math inline"><em>k</em></span>, we have <span class="math inline"><em>f</em>(<em>t</em><em>x</em><sub>1</sub>, …, <em>t</em><em>x</em><sub><em>n</em></sub>) = <em>t</em><sup><em>k</em></sup><em>f</em>(<em>x</em><sub>1</sub>, …, <em>x</em><sub><em>n</em></sub>)</span>. Taking the derivative with respect to <span class="math inline"><em>t</em></span> yields</p>
+<p><br /><span class="math display">$$ \sum_{i=1}^n \frac{\partial f}{\partial (tx_i)} \frac{\partial (tx_i)}{\partial t}  = kt^{k-1} f(x_1, \dots, x_n) $$</span><br /> <br /><span class="math display">$$ \sum_{i=1}^n x_i \frac{\partial f}{\partial (tx_i)} = kt^{k-1} f(x_1, \dots, x_n) $$</span><br /></p>
+<p>Taking <span class="math inline"><em>t</em> = 1</span> then yields</p>
+<p><br /><span class="math display">$$ \sum_{i=1}^n x_i \frac{\partial f}{\partial (x_i)} = k f(x_1, \dots, x_n) $$</span><br /></p>
+</div>
 
         </div>
         <div id="footer">
