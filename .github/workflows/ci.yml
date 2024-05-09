@@ -6,20 +6,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        cabal: ["3.4.0.0"]
-        ghc: ["8.10.7"]
     steps:
       - uses: actions/checkout@v4
-      - uses: haskell/actions/setup@v2
+      - uses: haskell-actions/setup@v2
         with:
           enable-stack: true
           stack-version: 'latest'
       - name: Build Blog
         run: |
           stack build
-          stack exec site build
+          stack exec blog build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         if: github.ref == 'refs/heads/hakyll'
