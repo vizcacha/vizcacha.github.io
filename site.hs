@@ -2,9 +2,16 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
-
+import           Text.Pandoc.Options
+import qualified Data.Set as S
 
 --------------------------------------------------------------------------------
+
+
+pandocOptions :: WriterOptions
+pandocOptions = defaultHakyllWriterOptions{ writerHTMLMathMethod = MathJax ""}
+
+
 main :: IO ()
 main = hakyll $ do
     match "images/*" $ do
@@ -15,7 +22,7 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.rst", "contact.markdown"]) $ do
+    match (fromList ["about.rst"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
