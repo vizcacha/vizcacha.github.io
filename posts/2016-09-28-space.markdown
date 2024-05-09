@@ -1,0 +1,24 @@
+---
+title: A Tour of Mathematical Space
+author: Steven Canning
+---
+
+If you continue to study mathematics past calculus, you will be bombarded by a zoo of mathematical spaces.
+
+The word *space* by itself is never really defined; it can be taken to be a synonym for set.
+Typically, a space consists of a set of points along with some kind of structure.
+That structure can come in many different forms.
+
+## Algebraic spaces
+
+There are a lot of different algebraic structures we could give a set.
+Despite lacking the term space in their names, groups, rings, fields, and related objects certainly satisfy the definition above.
+For our purposes, we will start with the *vector space*.
+Vector spaces (sometimes also called linear spaces) consist of a field $K$ along with a set of vectors $V$.
+We often say $V$ is a vector space over $K$.
+
+## Topological spaces
+
+## Metric spaces
+
+## Banach, Hilbert, and Fock spaces

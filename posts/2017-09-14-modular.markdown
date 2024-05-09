@@ -1,0 +1,25 @@
+---
+title: Modular Forms and Sums of Squares
+author: Steven Canning
+---
+
+This post is an elaboration of an example (Example 1.2.1) in ...
+
+An interesting question is how many ways are there to represent a given number as a sum of squares.
+First we could consider representing a number as the sum of two squares.
+If we consider the number 5, we find that there are 8 possible ways when you consider order and sign.
+
+$$ 5 = (\pm 2)^2 + (\pm 1)^2 = (\pm 1)^2 + (\pm 2)^2 $$
+
+
+More formally we can define $S_n (k)$ to be the number of ways to represent the number $k$ as a sum of $n$ squares.
+From the example above, $S_2 (5) = 8$.
+Formulas for the small values of $n$ have been found using classical methods of number theory.
+For instance
+
+$$ S_2 (k) = 2 \left( 1 + \left(\frac{-1}{k}\right) \right) \sum_{d | k} \left(\frac{-1}{d}\right) $$
+
+
+where $ \left(\frac{-1}{n}\right) $ is the Jacobi symbol.
+
+To understand the Jacobi symbol, we first need to understand the Legendre symbol, and to understand the Legendre symbol it is necessary to know a bit about quadratic residues.
