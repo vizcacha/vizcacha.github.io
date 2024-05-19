@@ -26,19 +26,34 @@
     
 </div>
 
-<p>A team of exoplanet searchers recently released a <a href="http://home.dtm.ciw.edu/ebps/data/">large set of data</a>. The goal of this article is to review one method of finding exoplanets, and then to apply those methods to the released data.</p>
+<p>A team of exoplanet searchers recently released a <a href="http://home.dtm.ciw.edu/ebps/data/">large set of data</a>.
+The goal of this article is to review one method of finding exoplanets, and then to apply those methods to the released data.</p>
 <h3 id="background">Background</h3>
-<p>When solving for planetary orbits, most students are told to make the simplifying assumption that the star is infinitely massive. However, the star really does have finite mass and mutually orbits its planets. This motion would appear to the observer as a periodic wobble in the velocity of the star. We should be able to detect this stellar wobble, and thus infer the existence of an exoplanet.</p>
+<p>When solving for planetary orbits, most students are told to make the simplifying assumption that the star is infinitely massive.
+However, the star really does have finite mass and mutually orbits its planets.
+This motion would appear to the observer as a periodic wobble in the velocity of the star.
+We should be able to detect this stellar wobble, and thus infer the existence of an exoplanet.</p>
 <h2 id="systemic">Systemic</h2>
-<p><a href="http://www.stefanom.org/systemic/" title="Systemic2">Systemic Console 2</a> is a tool for analyzing stellar velocity data for the presence of exoplanets. It comes pre-loaded with radial velocity data from many sources. There is a <a href="http://oklo.org/systemic-console-tutorial-1-hd-4208/">4 part tutorial</a> on using the software. Though it is written for an older version, the core features are the same.</p>
-<p>Unfortunately, I ran into several problems trying to get Systemic Console 2 to work properly. On my Mac laptop, I ran into a launch time problem, and found the corresponding <a href="https://github.com/stefano-meschiari/Systemic2/issues/26">github issue</a>. I then installed an Ubunutu 16.04 virtual machine and attempted to run the software in that environment. The results were more promising (the application opened), but ultimately unsuccessful. A quick search revealed that I am not alone and that <a href="https://github.com/stefano-meschiari/Systemic2/issues/22">an issue</a> had already been reported.</p>
-<p>Fortunately, there is also a web-based version of Systemic called Systemic Live. I can load the HD 4208 data into the program just like in the tutorial.</p>
+<p><a href="http://www.stefanom.org/systemic/" title="Systemic2">Systemic Console 2</a> is a tool for analyzing stellar velocity data for the presence of exoplanets.
+It comes pre-loaded with radial velocity data from many sources.
+There is a <a href="http://oklo.org/systemic-console-tutorial-1-hd-4208/">4 part tutorial</a> on using the software.
+Though it is written for an older version, the core features are the same.</p>
+<p>Unfortunately, I ran into several problems trying to get Systemic Console 2 to work properly.
+On my Mac laptop, I ran into a launch time problem, and found the corresponding <a href="https://github.com/stefano-meschiari/Systemic2/issues/26">github issue</a>.
+I then installed an Ubunutu 16.04 virtual machine and attempted to run the software in that environment.
+The results were more promising (the application opened), but ultimately unsuccessful.
+A quick search revealed that I am not alone and that <a href="https://github.com/stefano-meschiari/Systemic2/issues/22">an issue</a> had already been reported.</p>
+<p>Fortunately, there is also a web-based version of Systemic called Systemic Live.
+I can load the HD 4208 data into the program just like in the tutorial.</p>
 <p><img src="../images/systemiclive.png" /></p>
 <p>Manually adjusting the parameters and then applying the optimization yields the following fit.</p>
 <p><img src="../images/afterfit.png" /></p>
-<p>With a <span class="math inline"><em>χ</em><sup>2</sup> = 2.52</span>, the fit here isn’t as good as the one in the desktop version of the tutorial. Starting from different manual adjustments reaches different fits, but this was the best one I achieved.</p>
+<p>With a <span class="math inline"><em>χ</em><sup>2</sup> = 2.52</span>, the fit here isn’t as good as the one in the desktop version of the tutorial.
+Starting from different manual adjustments reaches different fits, but this was the best one I achieved.</p>
 <h2 id="manually-fitting-the-data">Manually fitting the data</h2>
-<p>Since I couldn’t get Systemic Console to work properly and Systemic Live doesn’t allow data sets to be uploaded, I made an attempt to write my own curve-fitting techniques. We will take a look at the same star as above, HD 4208. First, we inspect the data file from the Keck data set.</p>
+<p>Since I couldn’t get Systemic Console to work properly and Systemic Live doesn’t allow data sets to be uploaded, I made an attempt to write my own curve-fitting techniques.
+We will take a look at the same star as above, HD 4208.
+First, we inspect the data file from the Keck data set.</p>
 <pre><code>2451010.10523     17.69   1.20  0.1653 -1.00000    118398   275
 2451014.09906     16.36   1.57  0.1549 -1.00000    108803   220
 2451043.04968     17.16   1.36  0.1620 -1.00000    153146   300
@@ -87,7 +102,11 @@
 2456638.73076    -15.93   1.46  0.1592  0.03126     50469   121
 2456874.13410     -1.28   1.51  0.1509  0.03106     48822   101
 2456907.08927     -0.43   1.59  0.1567  0.03121     49106    93</code></pre>
-<p>The first column is the Julian Date. The second column is the measured velocity in m/s. The third column is the uncertainty in the velocity, also in m/s. The fourth column is the S_value and the fifth column is H_alpha. The fifth column is the median number of photons per pixel, and the fifth column is the exposure time in seconds.</p>
+<p>The first column is the Julian Date.
+The second column is the measured velocity in m/s.
+The third column is the uncertainty in the velocity, also in m/s.
+The fourth column is the S_value and the fifth column is H_alpha.
+The fifth column is the median number of photons per pixel, and the fifth column is the exposure time in seconds.</p>
 <h2 id="references-and-links">References and Links</h2>
 <ul>
 <li>Butler, Vogt, Laughlin, et al., <em>The LCES HIRES/KECK Precision Radial Velocity Exoplanet Survey</em> (2017) <a href="http://home.dtm.ciw.edu/ebps/wp-content/uploads/2017/02/Keck_planet_search.pdf">Link</a></li>
