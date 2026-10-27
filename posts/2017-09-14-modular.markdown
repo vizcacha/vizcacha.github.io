@@ -1,16 +1,16 @@
 ---
 title: Modular Forms and Sums of Squares
 author: Steven Canning
+updated: November 13, 2026
 ---
 
-This post is an elaboration of an example (Example 1.2.1) in ...
+This post is an elaboration of Example 1.2.1 in *Elliptic Curves, Modular Forms, and Their L-functions* by Álvaro Lozano-Robledo.
 
 An interesting question is how many ways are there to represent a given number as a sum of squares.
 First we could consider representing a number as the sum of two squares.
 If we consider the number 5, we find that there are 8 possible ways when you consider order and sign.
 
-$$ 5 = (\pm 2)^2 + (\pm 1)^2 = (\pm 1)^2 + (\pm 2)^2 $$
-
+$$ 5 = \left( \pm 2 \right) ^ 2 + ( \pm 1 )^2 = ( \pm 1 )^2 + ( \pm 2 )^2 $$
 
 More formally we can define $S_n (k)$ to be the number of ways to represent the number $k$ as a sum of $n$ squares.
 From the example above, $S_2 (5) = 8$.
@@ -20,6 +20,22 @@ For instance
 $$ S_2 (k) = 2 \left( 1 + \left(\frac{-1}{k}\right) \right) \sum_{d | k} \left(\frac{-1}{d}\right) $$
 
 
-where $ \left(\frac{-1}{n}\right) $ is the Jacobi symbol.
+where 
+
+$$ \left(\frac{-1}{n}\right) $$
+
+is the Jacobi symbol.
 
 To understand the Jacobi symbol, we first need to understand the Legendre symbol, and to understand the Legendre symbol it is necessary to know a bit about quadratic residues.
+
+<div class="definition">
+$x$ is said to be a quadratic residue modulo $n$ if
+
+$$ q^2 \equiv x (\mod n) $$
+
+for some integer $q$.
+</div>
+
+<div class="definition"> The Legendre symbol is defined as
+$$ \left(\frac{a}{p}\right) = \begin{cases}0 & a\equiv 0 \mod p\\ 1 & \text{$a$ is a quadratic residue modulo $p$}\\ -1 & \text{$a$ is not a quadratic residue modulo $p$}\\ \end{cases}$$
+</div>

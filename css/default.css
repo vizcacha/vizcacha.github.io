@@ -135,10 +135,10 @@ td.sourceCode { padding-left: 5px; }
 .definition {
     display: block;
     margin: 12px 0;
-    font-style: normal;
+    font-style: italic;
 }
 .definition:before {
-    content: "Definition.";
+    content: "Definition. ";
     font-weight: bold;
     font-style: normal;
 }
