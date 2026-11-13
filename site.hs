@@ -49,6 +49,11 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
+    match "events.html" $ do
+        route idRoute
+        compile $ pandocCompiler
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
 
     match "index.html" $ do
         route idRoute
