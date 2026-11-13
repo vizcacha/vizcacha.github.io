@@ -14,6 +14,7 @@
             <div id="navigation">
                 <a href="../">Home</a>
                 <a href="../about.html">About</a>
+                <a href="../events.html">Food & Wine Events</a>
                 <a href="../archive.html">Archive</a>
             </div>
         </div>
@@ -24,9 +25,11 @@
             <div class="info">
     Posted on September 14, 2017.
     
+        Updated on November 13, 2026
+    
 </div>
 
-<p>This post is an elaboration of an example (Example 1.2.1) in …</p>
+<p>This post is an elaboration of Example 1.2.1 in <em>Elliptic Curves, Modular Forms, and Their L-functions</em> by Álvaro Lozano-Robledo.</p>
 <p>An interesting question is how many ways are there to represent a given number as a sum of squares.
 First we could consider representing a number as the sum of two squares.
 If we consider the number 5, we find that there are 8 possible ways when you consider order and sign.</p>
@@ -36,11 +39,21 @@ From the example above, <span class="math inline"><em>S</em><sub>2</sub>(5) =�
 Formulas for the small values of <span class="math inline"><em>n</em></span> have been found using classical methods of number theory.
 For instance</p>
 <p><span class="math display">$$ S_2 (k) = 2 \left( 1 + \left(\frac{-1}{k}\right) \right) \sum_{d | k} \left(\frac{-1}{d}\right) $$</span></p>
-<p>where $ () $ is the Jacobi symbol.</p>
+<p>where</p>
+<p><span class="math display">$$ \left(\frac{-1}{n}\right) $$</span></p>
+<p>is the Jacobi symbol.</p>
 <p>To understand the Jacobi symbol, we first need to understand the Legendre symbol, and to understand the Legendre symbol it is necessary to know a bit about quadratic residues.</p>
+<div class="definition">
+<p><span class="math inline"><em>x</em></span> is said to be a quadratic residue modulo <span class="math inline"><em>n</em></span> if</p>
+<p><span class="math display"><em>q</em><sup>2</sup> ≡ <em>x</em>( mod  <em>n</em>)</span></p>
+<p>for some integer <span class="math inline"><em>q</em></span>.</p>
+</div>
+<div class="definition">
+<p>The Legendre symbol is defined as
+<span class="math display">$$ \left(\frac{a}{p}\right) = \begin{cases}0 &amp; a\equiv 0 \mod p\\ 1 &amp; \text{$a$ is a quadratic residue modulo $p$}\\ -1 &amp; \text{$a$ is not a quadratic residue modulo $p$}\\ \end{cases}$$</span></p>
+</div>
 
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         </div>
         <div id="footer">
