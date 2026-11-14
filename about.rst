@@ -2,7 +2,9 @@
 title: About
 ---
 
-I am a software developer by day and a physics graduate student by night.
+I am a wine professional who was a software developer in a past life.
+This is my place to write about stuff that interests me.
+It is very much a continuous work in progress as I port and update old posts.
 
 Email: spcanning at gmail dot com
 
